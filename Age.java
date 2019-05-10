@@ -17,13 +17,20 @@ class Age{
 			System.out.println("Enter Date of Birth (DD MM YYYY): ");
 			tokens = sc.nextLine().split("[ /.-]+");
 			if(tokens.length != 3){
-				System.out.println("Illegal Date Format. Type Age --help for help.");
+				System.out.println("Illegal Date Format, Type Age --help for help.");
 				System.exit(1);
 			}
 		}
 		int[] dmy = new int[3];
 		for(int i = 0; i < 3; i++){
-			dmy[i] = Integer.parseInt(tokens[i]);
+			try{
+				dmy[i] = Integer.parseInt(tokens[i]);
+			}
+			catch(NumberFormatException nfe){
+				System.out.print("Invalid Date Format, Type Age --help for help.");
+				System.exit(1);
+			}
+			
 		}
 		dmy[1]--;
 		int[] fields = {Calendar.DATE,Calendar.MONTH,Calendar.YEAR};
