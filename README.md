@@ -21,3 +21,6 @@ Run `java Age dd/mm/yyyy` and get result, or
 
 Run `java Age dd-mm-yyyy` and get result
 
+### Example:
+
+![Example](demo.png)
