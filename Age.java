@@ -16,6 +16,7 @@ class Age{
 			Scanner sc = new Scanner(System.in);			// Then take DOB input
 			System.out.println("Enter Date of Birth (DD MM YYYY): ");
 			tokens = sc.nextLine().split("[ /.-]+");			// Split entered DOB into tokens (dd,mm,yyyy)
+			sc.close();
 			if(tokens.length != 3){								// If there aren't 3 tokens they entered something wrong
 				System.out.println("Illegal Date Format, Type Age --help for help.");	// Show error msg and exit
 				System.exit(1);
